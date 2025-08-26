@@ -1,22 +1,18 @@
 package com.sample.crud.Entity;
 
+import org.springframework.data.annotation.Id;
 
-
-import io.micrometer.common.lang.NonNull;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
+public class Employee {
 
-public class CrudEntity {
-
+    @Id
     @NotNull
     public int employeeId;
-    public String firstName;
-    public String lastName;
+    public String name;
     public String email;
-    public int salary;
-    public String department;
-
+    public String password;
     
 }
