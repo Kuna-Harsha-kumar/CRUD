@@ -1,8 +1,6 @@
 package com.sample.crud.Entity;
 
 
-
-import io.micrometer.common.lang.NonNull;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 

@@ -13,6 +13,16 @@ public class EmployeeService {
     EmployeeMapper employeeMapper;
 
     public int addNewEmployee(Employee employee){
+        System.out.println(employee.getEmail());
         return employeeMapper.addNewEmployee(employee);
     }
+    public Employee employeeLogin(String email,String password){
+        Employee employee=employeeMapper.employeeLogin(email);
+        System.out.println(employee.getEmail());
+        if (employee.getEmail().equalsIgnoreCase(email) && employee.getPassword().equals(password)){
+        return employee;
+    }else{
+        return employee;
+    }
+}
 }

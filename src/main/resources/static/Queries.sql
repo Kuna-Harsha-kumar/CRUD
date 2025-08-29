@@ -19,3 +19,27 @@ VALUES
 ('Alice', 'Johnson', 'alice.johnson@example.com', 80000, 'Finance');
 
 select * from Employees
+
+
+
+create table employeeLogin(
+       EmployeeID INT PRIMARY KEY AUTO_INCREMENT,
+       Name varchar(50),
+       Email varchar(50),
+       Password varchar(50),
+       LastLogin Timestamp
+);
+
+select * from employeeLogin el
+
+INSERT INTO employeeLogin (Name, Email, Password, LastLogin)
+VALUES ('John Doe', 'john@test.com', '12345', CURRENT_TIMESTAMP);
+
+
+Select * from employeeLogin where email="New";
+
+ALTER TABLE employeeLogin AUTO_INCREMENT = 1;
+
+
+delete from employeeLogin;
+select * from employeeLogin el 
